@@ -11,7 +11,7 @@ sudo python3 get-pip.py
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/n0b0dyCN/n0vim.git
 cd n0vim
-sh install-n0vim.sh
+bash install-n0vim.sh
 cd ~
 
 curl -fsSL get.docker.com -o get-docker.sh
