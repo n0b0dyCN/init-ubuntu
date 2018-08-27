@@ -8,6 +8,7 @@ cd ~
 sudo apt -y install git zsh nginx tmux curl wget python3 vim cmake build-essential python3-distutils
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 get-pip.py
+sudo pip install requests ipython flask six
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/n0b0dyCN/n0vim.git
 cd n0vim
