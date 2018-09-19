@@ -7,3 +7,5 @@ Install packages commonly used by ctfers for ubuntu, including:
 * Docker & docker-compose
 * Vim with my vim configuration
 
+## Proxychains
+If the network is too slow, you can use proxychains to accelerate the installation.
