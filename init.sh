@@ -1,11 +1,18 @@
 #!/bin/bash
-set -e
-set -x
+set -ex
 
 sudo apt update
 
 cd ~
 sudo apt -y install git zsh nginx tmux curl wget python3 vim cmake build-essential python3-distutils
+
+cd ~
+git clone https://github.com/rofl0r/proxychains-ng.git
+cd proxychains-ng
+./configure --prefix=/usr --sysconfdir=/etc
+make && sudo make install
+
+cd ~
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 get-pip.py
 sudo pip install requests ipython flask six
@@ -20,10 +27,10 @@ sudo sh get-docker.sh
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo usermod -aG docker `whoami`
+
+
 cd ~
 rm get*
 rm -rf n0vim
-mkdir workspace
-mkdir tools
-mkdir ctf
+
 
